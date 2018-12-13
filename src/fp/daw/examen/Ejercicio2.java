@@ -13,7 +13,23 @@ public class Ejercicio2 {
 	 *  
 	 */
 	
-	public static ...
+	public static int busquedaBinaria(int vector[], int n){
+		  int v = vector.length;
+		  int centro,inf=0,sup=v-1;
+		   while(inf<=sup){
+		     centro=(sup+inf)/2;
+		     if(vector[centro]==n) 
+		    	 return centro;
+		     else if(n < vector [centro] ){
+		        sup=centro-1;
+		     }
+		     else {
+		       inf=centro+1;
+		     }
+		   }
+		   return -1;
+		 }
+
 	
 	
 	/*
@@ -32,7 +48,13 @@ public class Ejercicio2 {
 	 */
 	
 	public static void main(String[] args) {
-		
+	     
+		  int val =(int)Math.floor(Math.random()*(100-200)+200);
+			 int[]vector =new int[val];
+			 for(int i=0;i<vector.length;i++) {
+				 vector[i]=(int)Math.floor(Math.random()*(0-Integer.MAX_VALUE)+Integer.MAX_VALUE);
+			 }
+	       	  System.out.println(busquedaBinaria(vector,val));
 		
 	}
 

@@ -1,5 +1,7 @@
 package fp.daw.examen;
 
+
+
 public class Ejercicio3 {
 
 	/*
@@ -18,7 +20,32 @@ public class Ejercicio3 {
 	 *  
 	 */
 	
-	public static ...
+	public static int[][]stringToArray2D(String cadena){
+		
+		int [][]vector=new int[2][2];
+		    for(int i=0;i<vector.length;i++) {
+			for(int j=0;j<vector.length;j++) {
+			
+			if(cadena.indexOf(j)%2==0) {
+				vector[i][j]=cadena.charAt(j);
+				
+				
+			}else {
+				vector[i][j]=cadena.charAt(j);
+			}
+			
+		}
+		}
+		
+		        for(int i=0;i<vector.length;i++) {
+				for(int j=0;j<vector.length;j++) {
+				System.out.print(vector[i][j]);
+				}
+			}
+			
+
+			return vector;
+	}
 	
 	/*
 	 * 1 punto
@@ -31,7 +58,7 @@ public class Ejercicio3 {
 	 */
 	
 	public static void main(String[] args) {
-		
+		stringToArray2D("cad");
 	}
 
 }
